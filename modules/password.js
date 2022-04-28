@@ -3,6 +3,17 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const mailer = require('nodemailer')
 const {ObjectId} = require('mongodb')
+
+
+module.exports.homepage = async (req, res, next) => {
+    try{
+        res.send({msg:"started successfully"})
+    }
+    catch(err){
+        res.send(err)
+    }
+}
+
 module.exports.passwordReset = async (req, res, next) => {
     try {
         // console.log("in password reset func", req.body.email);
