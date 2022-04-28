@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Password reset</title>
+</head>
+<body>
+    <div>
+        <h2>Reset Password</h2>
+        <form  class="form" action="" method="POST" onsubmit="validate(event)">
+            <input class="password" type="password" name="Password" placeholder="New Password" minlength=6 maxlength=16 required><br/> <br/>
+            <input class="conpassword" type="password" name="ConPassword" placeholder="Conform Password" required><br/> <br/>
+            <input type="submit" value="Save"/>
+        </form>
+    <div/>
+    <script>
+        const validate = function (event){
+            let password = document.querySelector('.password').value
+            let conpassword = document.querySelector('.conpassword').value
+            let id = window.location.pathname.split("/").filter((e)=>e.includes(":"))[0].split(":").filter(e=>e)
+            if(password === conpassword){
+                // document.querySelector(".form").action =`https://localhost:3000/${id}/string`
+                return(password,conpassword) ;
+            }
+            else{
+                alert("Password not Matched")
+            }
+        }
+    </script>
+</body>
+</html>
