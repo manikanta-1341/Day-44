@@ -24,4 +24,4 @@ app.use("/",(req,res, next) =>{
 app.use('/',password)
 
 
-app.listen(process.env.port)
+app.listen(process.env.PORT || 5000 )
