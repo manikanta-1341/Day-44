@@ -36,7 +36,7 @@ module.exports.passwordReset = async (req, res, next) => {
                 from: 'tt8632965@gmail.com', // sender address
                 to: "medicharlamanikanta13@gmail.com", // list of receivers
                 subject: "Password Reset", // Subject line
-                text: `http://localhost:3000/${user._id}/string/?s=${token}` // plain text body
+                text: `https://day-44.herokuapp.com/${user._id}/string/?s=${token}` // plain text body
             }, function (error, info) {
                 if (error) {
                     console.log(error);

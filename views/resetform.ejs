@@ -22,7 +22,6 @@
             let conpassword = document.querySelector('.conpassword').value
             let id = window.location.pathname.split("/").filter((e)=>e.includes(":"))[0].split(":").filter(e=>e)
             if(password === conpassword){
-                // document.querySelector(".form").action =`https://localhost:3000/${id}/string`
                 return(password,conpassword) ;
             }
             else{
